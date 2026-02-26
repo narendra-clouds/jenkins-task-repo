@@ -1,10 +1,16 @@
 # jenkins-task-repo
 
-MCQs Questions
+* MCQs Questions
 1.  What is Jenkins mainly used for?
-- B Continuous Integration and Continuous Delivery
+   - A Server Monitoring
+   - B Continuous Integration and Continuous Delivery
+   - C Database Management
+   - D Container Orchestration
+     
+ans= B Continuous Integration and Continuous Delivery
 
 2. Which type of job allows you to define build steps using codein Jenkins?
+   
 - A Freestyle Project
  
 

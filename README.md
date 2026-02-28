@@ -100,6 +100,8 @@
 
 **Answer:** B) The pipeline stops execution  
 
+----
+
 
 
 

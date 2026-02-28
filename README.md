@@ -116,3 +116,298 @@ Your manager has assigned you the following tasks:
 - Troubleshoot and fix pipeline issues if deployment fails.
 - You are responsible for complete automation.
 
+  ---
+
+
+
+
+  Perfect Narendra 🔥
+
+---
+
+# 🚀 FitLife Gym – CI/CD Deployment using Jenkins
+
+## 📌 Project Overview
+
+This project demonstrates a complete **CI/CD pipeline setup** using Jenkins to automatically deploy a static HTML website to a target Linux server using SSH.
+
+The goal of this project is to simulate a real-world DevOps workflow where:
+
+* Developers push code to GitHub
+* Jenkins automatically triggers a build
+* Website gets deployed to a remote server
+* Nginx serves the updated website
+
+---
+
+# 🏗️ Project Architecture
+
+```
+Developer → GitHub → Webhook → Jenkins → SSH → Target Server → Nginx
+```
+
+---
+
+# 🛠️ Technologies Used
+
+* Jenkins
+* GitHub
+* Linux (Ubuntu)
+* Nginx
+* SSH
+* Git
+
+---
+
+# 📂 Project Structure
+
+```
+gym-static-website/
+│── index.html
+│── Jenkinsfile
+│── README.md
+```
+
+---
+
+# 🖥️ Task 1 – Infrastructure Setup
+
+## 1️⃣ Jenkins Server Setup
+
+* Installed Java
+* Installed Jenkins
+* Installed required plugins:
+
+  * Git Plugin
+  * Pipeline Plugin
+  * SSH Agent Plugin
+  * GitHub Integration Plugin
+* Configured SSH credentials
+
+📸 **Attach Screenshot Here:**
+
+* Topic Name: `Jenkins Dashboard`
+* Topic Name: `Installed Plugins`
+* Topic Name: `SSH Credentials Configuration`
+
+---
+
+## 2️⃣ Target Server Setup
+
+* Installed Nginx
+* Enabled and started Nginx
+* Opened port 80 in security group
+* Verified website accessibility in browser
+
+📸 **Attach Screenshot Here:**
+
+* Topic Name: `Nginx Default Page`
+* Topic Name: `Security Group Port 80 Open`
+
+---
+
+# 📦 Task 2 – GitHub Repository Setup
+
+* Created public repository: `gym-static-website`
+* Added static HTML code
+* Pushed to main branch
+
+📸 **Attach Screenshot Here:**
+
+* Topic Name: `GitHub Repository`
+* Topic Name: `Initial Commit`
+
+---
+
+# 🔄 Task 3 – Website Modification
+
+Changed:
+
+```
+Hello from FitLife Gym
+```
+
+To:
+
+```
+Hi from FitLife Gym
+```
+
+Committed and pushed changes to GitHub.
+
+📸 **Attach Screenshot Here:**
+
+* Topic Name: `Updated HTML Code`
+* Topic Name: `GitHub Commit After Change`
+
+---
+
+# 🔗 Task 4 – GitHub Webhook Configuration
+
+Configured webhook to trigger Jenkins automatically on push.
+
+Webhook URL:
+
+```
+http://<JENKINS_IP>:8080/github-webhook/
+```
+
+Selected:
+
+* Application/json
+* Just the push event
+
+📸 **Attach Screenshot Here:**
+
+* Topic Name: `GitHub Webhook Settings`
+* Topic Name: `Recent Webhook Deliveries`
+
+---
+
+# ⚙️ Task 5 – Jenkins Pipeline
+
+Created a Pipeline job using a `Jenkinsfile`.
+
+Pipeline Stages:
+
+1. Clone Repository
+2. Deploy to Target Server
+3. Restart Nginx
+4. Post Success/Failure Messages
+
+---
+
+## 📝 Jenkinsfile
+
+```groovy
+pipeline {
+    agent any
+
+    environment {
+        SERVER_IP = 'YOUR_TARGET_IP'
+        SSH_CREDENTIAL = 'gym-key'
+        REPO_URL = 'https://github.com/your-username/gym-static-website.git'
+        BRANCH = 'main'
+        REMOTE_USER = 'ubuntu'
+        REMOTE_PATH = '/var/www/html'
+    }
+
+    stages {
+
+        stage('Clone Repository') {
+            steps {
+                git branch: "${BRANCH}", url: "${REPO_URL}"
+            }
+        }
+
+        stage('Deploy to Target Server') {
+            steps {
+                sshagent([SSH_CREDENTIAL]) {
+                    sh """
+                    ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} 'mkdir -p ${REMOTE_PATH}'
+                    scp -o StrictHostKeyChecking=no -r * ${REMOTE_USER}@${SERVER_IP}:${REMOTE_PATH}
+                    """
+                }
+            }
+        }
+
+        stage('Restart Nginx') {
+            steps {
+                sshagent([SSH_CREDENTIAL]) {
+                    sh """
+                    ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} '
+                    sudo systemctl restart nginx
+                    '
+                    """
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Deployment Successful'
+        }
+        failure {
+            echo 'Deployment Failed'
+        }
+    }
+}
+```
+
+📸 **Attach Screenshot Here:**
+
+* Topic Name: `Pipeline Job Configuration`
+* Topic Name: `Pipeline Successful Build`
+* Topic Name: `Console Output`
+* Topic Name: `Deployed Website in Browser`
+
+---
+
+# 🐞 Issue Faced & Fix
+
+## ❌ Problem:
+
+Permission denied while deploying to `/var/www/html`.
+
+## 💡 Root Cause:
+
+Ubuntu user did not have write permission on `/var/www/html`.
+
+## ✅ Solution:
+
+Changed ownership:
+
+```bash
+sudo chown -R ubuntu:ubuntu /var/www/html
+```
+
+After that deployment worked successfully.
+
+📸 **Attach Screenshot Here:**
+
+* Topic Name: `Permission Denied Error`
+* Topic Name: `Successful Deployment After Fix`
+
+---
+
+# 🔥 Key Learnings
+
+* How to configure Jenkins CI/CD
+* How GitHub Webhooks trigger pipelines
+* How to use SSH Agent in Jenkins
+* How to troubleshoot permission issues
+* How to automate deployment to Nginx server
+
+---
+
+# 🎯 Interview Explanation (How I Describe This Project)
+
+> I implemented a complete CI/CD pipeline using Jenkins to automatically deploy a static website hosted on GitHub to a remote Linux server. I configured GitHub webhooks for automatic trigger, used SSH credentials for secure deployment, and automated Nginx restart. I also troubleshooted permission-related deployment issues.
+
+---
+
+# 📌 Future Improvements
+
+* Use AWS EC2 instead of local servers
+* Add Docker containerization
+* Use Nginx reverse proxy
+* Implement HTTPS using SSL
+* Add Blue-Green Deployment strategy
+
+---
+
+# 👨‍💻 Author
+
+**Narendra Deshmukh**
+Cloud & DevOps Learner ☁️
+
+---
+
+If you want, I can now:
+
+* Make a 🔥 advanced README version (with badges & icons)
+* Or make a professional LinkedIn project description for this
+* Or review your GitHub repo like a recruiter 😎
+
+

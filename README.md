@@ -93,7 +93,7 @@ shell commands?
 
 
 
-* Scenario Based questions
+# Scenario Based questions
 
 You are hired as a Junior DevOps Engineer in a startup fitness company called FitLife Gym.
 The development team has created a static HTML website for the gym.

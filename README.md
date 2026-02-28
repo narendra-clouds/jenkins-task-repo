@@ -88,6 +88,11 @@ shell commands?
 
 
 
+
+
+
+
+
 * Scenario Based questions
 
 You are hired as a Junior DevOps Engineer in a startup fitness company called FitLife Gym.

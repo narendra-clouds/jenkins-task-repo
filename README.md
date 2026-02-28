@@ -185,8 +185,8 @@ gym-static-website/
 
 📸 **Attach Screenshot Here:**
 
-* Topic Name: `<img width="1651" height="794" alt="Nginx Default Page" src="https://github.com/user-attachments/assets/56d82b25-539b-4c7c-80c4-2969233c79e1" />
-* Topic Name: `<img width="1842" height="385" alt="Security Group Port 80 Open" src="https://github.com/user-attachments/assets/0518cfe4-c5cc-44a5-8964-bc97f0257992" />
+* Topic Name: `Nginx Default Page`<img width="1651" height="794" alt="Nginx Default Page" src="https://github.com/user-attachments/assets/56d82b25-539b-4c7c-80c4-2969233c79e1" />
+* Topic Name: `Security Group Port 80 Open`<img width="1842" height="385" alt="Security Group Port 80 Open" src="https://github.com/user-attachments/assets/0518cfe4-c5cc-44a5-8964-bc97f0257992" />
 
 ---
 

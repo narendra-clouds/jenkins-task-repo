@@ -79,10 +79,10 @@ shell commands?
   
 
 10. What happens if a stage fails in Jenkins Pipeline (by default)?
-           - A The pipeline continues to next stage
-           - B The pipeline stops execution
-           - C Jenkins restarts automatically
-           - D All stages are skipped but marked successful
+         - A The pipeline continues to next stage
+         - B The pipeline stops execution
+         - C Jenkins restarts automatically
+         - D All stages are skipped but marked successful
 
 * - B The pipeline stops execution
 

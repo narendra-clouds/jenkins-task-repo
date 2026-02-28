@@ -107,24 +107,6 @@
 
 # Scenario Based questions
 
-You are hired as a Junior DevOps Engineer in a startup fitness company called FitLife Gym.
-The development team has created a static HTML website for the gym.
-Your manager has assigned you the following tasks:
-- Set up CI/CD infrastructure.
-- Host the website on a target server.
-- Ensure automatic deployment when code is pushed to GitHub.
-- Troubleshoot and fix pipeline issues if deployment fails.
-- You are responsible for complete automation.
-
-  ---
-
-
-
-
-  Perfect Narendra 🔥
-
----
-
 # 🚀 FitLife Gym – CI/CD Deployment using Jenkins
 
 ## 📌 Project Overview

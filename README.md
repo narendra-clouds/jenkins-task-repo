@@ -170,9 +170,9 @@ gym-static-website/
 
 📸 **Attach Screenshot Here:**
 
-* Topic Name: `<img width="1884" height="631" alt="Jenkins Dashboard" src="https://github.com/user-attachments/assets/5579deef-a752-436e-8938-ef4c74745228" />`
-* Topic Name: `<img width="1865" height="810" alt="Installed Plugins" src="https://github.com/user-attachments/assets/ce54de22-7311-494d-bf59-166fc740a591" />`
-* Topic Name: `<img width="1848" height="900" alt="SSH Credentials Configuration" src="https://github.com/user-attachments/assets/56758323-11f4-4203-87f9-a7bd41dd28f3" />`
+* Topic Name: `Jenkins Dashboard` <img width="1884" height="631" alt="Jenkins Dashboard" src="https://github.com/user-attachments/assets/5579deef-a752-436e-8938-ef4c74745228" />
+* Topic Name: `Installed Plugins`<img width="1865" height="810" alt="Installed Plugins" src="https://github.com/user-attachments/assets/ce54de22-7311-494d-bf59-166fc740a591" />
+* Topic Name: `SSH Credentials Configuration`<img width="1848" height="900" alt="SSH Credentials Configuration" src="https://github.com/user-attachments/assets/56758323-11f4-4203-87f9-a7bd41dd28f3" />
 
 ---
 
@@ -185,8 +185,8 @@ gym-static-website/
 
 📸 **Attach Screenshot Here:**
 
-* Topic Name: `<img width="1651" height="794" alt="Nginx Default Page" src="https://github.com/user-attachments/assets/56d82b25-539b-4c7c-80c4-2969233c79e1" />`
-* Topic Name: `<img width="1842" height="385" alt="Security Group Port 80 Open" src="https://github.com/user-attachments/assets/0518cfe4-c5cc-44a5-8964-bc97f0257992" />`
+* Topic Name: `<img width="1651" height="794" alt="Nginx Default Page" src="https://github.com/user-attachments/assets/56d82b25-539b-4c7c-80c4-2969233c79e1" />
+* Topic Name: `<img width="1842" height="385" alt="Security Group Port 80 Open" src="https://github.com/user-attachments/assets/0518cfe4-c5cc-44a5-8964-bc97f0257992" />
 
 ---
 
